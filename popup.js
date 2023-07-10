@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   boton.addEventListener("click", function () {
-    // Obtén la pestaña actual
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      const currentTab = tabs[0]; // la pestaña actual
+      const currentTab = tabs[0];
 
       chrome.scripting.executeScript(
         {
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         function (results) {
           const resultadoDiv = document.getElementById("resultado");
-          resultadoDiv.textContent = results[0].result; // Aquí se debe usar results[0].result
+          resultadoDiv.textContent = results[0].result;
         }
       );
     });
