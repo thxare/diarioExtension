@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
               resultadoDiv.textContent = results[0].result;
             }
           );
-        }, 1000);
+        }, 500);
       });
     });
   });
