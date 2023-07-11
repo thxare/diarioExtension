@@ -1,2 +1,2 @@
 # diarioFinancieroExtension
-Permite leer las noticias exclusivas del Diario Financiero
+Extensión de Chrome que permite leer las noticias exclusivas del Diario Financiero
