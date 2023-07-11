@@ -10,17 +10,20 @@ document.addEventListener("DOMContentLoaded", function () {
   boton.addEventListener("click", function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       const currentTab = tabs[0];
-
-      chrome.scripting.executeScript(
-        {
-          target: { tabId: currentTab.id },
-          function: injectScript,
-        },
-        function (results) {
-          const resultadoDiv = document.getElementById("resultado");
-          resultadoDiv.textContent = results[0].result;
-        }
-      );
+      chrome.tabs.reload(currentTab.id, function () {
+        setTimeout(() => {
+          chrome.scripting.executeScript(
+            {
+              target: { tabId: currentTab.id },
+              function: injectScript,
+            },
+            function (results) {
+              const resultadoDiv = document.getElementById("resultado");
+              resultadoDiv.textContent = results[0].result;
+            }
+          );
+        }, 1000);
+      });
     });
   });
 });
