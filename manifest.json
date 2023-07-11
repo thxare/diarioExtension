@@ -1,11 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Mi extensión",
-  "version": "1.0",
+  "name": "Diario extension",
+  "description": "Lee los diarios como Diario Financiero o El País sin pagar!",
+  "version": "2.0",
+  "author": "Anonimous",
   "permissions": ["tabs", "activeTab","scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
+      "48": "icon.png",
       "128": "icon.png"
     }
   },
