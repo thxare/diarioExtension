@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function injectScript() {
     const arr = Array.from(document.querySelectorAll("p"));
-    const resultado = arr.map((article) => article.textContent).join("\n");
-    return resultado;
+    const resultado = arr.map((article) => article.textContent);
+    const resultadoFiltrado = resultado.slice(0, -2).join("\n");
+    return resultadoFiltrado;
   }
 
   boton.addEventListener("click", function () {
@@ -22,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
               resultadoDiv.textContent = results[0].result;
             }
           );
-        }, 500);
+        }, 300);
       });
     });
   });

@@ -1,0 +1,26 @@
+.container{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#resultado{
+    padding: 20px;
+    font-size: 15px;
+}
+
+#change-message{
+    width: 60%;
+    order: 2;
+    padding: 8px 0;
+    background: #0E63EB;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    border-radius: 5px;
+    border: transparent;
+}
+#change-message:hover{
+    background: #297BFF;
+}
